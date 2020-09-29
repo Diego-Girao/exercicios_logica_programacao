@@ -81,10 +81,10 @@ function verifyDiscount(value1,value2){
 
     if(result === 95){
         message = " R$ "+ result + " ";
-    }
-    
-    if(result === 75){
-      message = " Percentual de desconto excede o limite de nossa política de preço ! ";
+
+    // if(result === 75){
+    }else{  
+    message = " Percentual de desconto excede o limite de nossa política de preço ! ";
     }
     return message;
 }
@@ -94,9 +94,12 @@ function isEqual(value1,value2){
     let message = "";
     if(value1 === value2){
         message = " Os números " + value1 + " e " + value2 + " são iguais. ";
-    }else if(value1 != value2){
-        message = " Os números " + value1 + " e " + value2 + " são diferentes. ";
-    }
+    // }else if(value1 != value2){
+    //   message = " Os números " + value1 + " e " + value2 + " são diferentes. ";
+
+    }else{
+    message = " Os números " + value1 + " e " + value2 + " são diferentes. ";
+}
     return message;
 }
     //Verificando valor para dedução
@@ -141,7 +144,10 @@ function verifyDayOfWeek(value){
         message = " Sexta-Feira ";
     }else if(value === 7){
         message = " Sábado ";
-    }else if(value < 1 || value > 7){
+    //}else if(value < 1 || value > 7){
+      //  message = " O número informado é inválido. ";
+    // }
+    }else{
         message = " O número informado é inválido. ";
     }
         return message;
